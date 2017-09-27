@@ -1,0 +1,409 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>GitHub+Hexo 搭建独立博客 | Liuxy&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Liuxy">
+    
+    <meta name="description" content="安装Hexo安装Node.js
+安装过程略。
+
+使用Node.js安装Hexo
+$ npm install -g hexo
+
+由于npm在国外，下载较慢的，可以尝试淘宝的cnpm镜像
+简单的开始
+新建文件夹hexo
+cd 到当前目录
+初始化hexo项目
+
+$ hexo init
+$ npm inst">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Liuxy&#39;s Blog" title="Liuxy&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Liuxy&#39;s Blog">Liuxy&#39;s Blog</a></h1>
+				<h2 class="blog-motto">时间太细，指缝太宽。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/jottings">随笔</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:lxy545480918.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/12/21/workHexo/" title="GitHub+Hexo 搭建独立博客" itemprop="url">GitHub+Hexo 搭建独立博客</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://lxy545480918.github.io" title="Liuxy">Liuxy</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-12-21T15:53:09.000Z" itemprop="datePublished">2015-12-21</time>
+    更新日期:<time datetime="2017-09-27T15:16:19.689Z" itemprop="dateModified">2017-09-27</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-number">1.</span> <span class="toc-text">安装Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用Node-js安装Hexo"><span class="toc-number">1.2.</span> <span class="toc-text">使用Node.js安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单的开始"><span class="toc-number">1.3.</span> <span class="toc-text">简单的开始</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Git"><span class="toc-number">2.</span> <span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定SSH"><span class="toc-number">3.</span> <span class="toc-text">绑定SSH</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-申请github账号"><span class="toc-number">3.1.</span> <span class="toc-text">1. 申请github账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-本地生成ssh-Key"><span class="toc-number">3.2.</span> <span class="toc-text">2. 本地生成ssh Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-与github绑定ssh-Key"><span class="toc-number">3.3.</span> <span class="toc-text">3. 与github绑定ssh Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-验证是否绑定成功"><span class="toc-number">3.4.</span> <span class="toc-text">4. 验证是否绑定成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-设置用户信息"><span class="toc-number">3.5.</span> <span class="toc-text">5. 设置用户信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用GitHub-Pages建立博客"><span class="toc-number">4.</span> <span class="toc-text">使用GitHub Pages建立博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建username-github-io项目"><span class="toc-number">4.1.</span> <span class="toc-text">创建username.github.io项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改hexo目录下的配置文件"><span class="toc-number">4.2.</span> <span class="toc-text">修改hexo目录下的配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上传github"><span class="toc-number">4.3.</span> <span class="toc-text">上传github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看结果"><span class="toc-number">4.4.</span> <span class="toc-text">查看结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定域名"><span class="toc-number">5.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换hexo主题"><span class="toc-number">6.</span> <span class="toc-text">更换hexo主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写一篇博客"><span class="toc-number">7.</span> <span class="toc-text">写一篇博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于代码备份"><span class="toc-number">8.</span> <span class="toc-text">关于代码备份</span></a></li></ol>
+		</div>
+		
+		<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><blockquote>
+<p>安装过程略。</p>
+</blockquote>
+<h3 id="使用Node-js安装Hexo"><a href="#使用Node-js安装Hexo" class="headerlink" title="使用Node.js安装Hexo"></a>使用Node.js安装Hexo</h3><blockquote>
+<p>$ npm install -g hexo</p>
+</blockquote>
+<p><code>由于npm在国外，下载较慢的，可以尝试淘宝的</code><a href="http://npm.taobao.org/" target="_blank" rel="external">cnpm镜像</a></p>
+<h3 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h3><ol>
+<li>新建文件夹hexo</li>
+<li>cd 到当前目录</li>
+<li><p>初始化hexo项目</p>
+<blockquote>
+<p>$ hexo init</p>
+<p>$ npm install</p>
+<p>$ hexo g</p>
+<p>$ hexo s</p>
+</blockquote>
+</li>
+<li>打开浏览器，<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>即可以看到hexo的简单博客</li>
+</ol>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Ubuntu14.04 自带Git客户端</p>
+<p>windows，<a href="http://git-scm.com/downloads/" target="_blank" rel="external">直接下载安装</a>,配置环境变量</p>
+<h2 id="绑定SSH"><a href="#绑定SSH" class="headerlink" title="绑定SSH"></a>绑定SSH</h2><p><code>该步骤并不是必须，为了方便hexo一键部署</code></p>
+<h3 id="1-申请github账号"><a href="#1-申请github账号" class="headerlink" title="1. 申请github账号"></a>1. 申请github账号</h3><p><a href="https://github.com/" target="_blank" rel="external">GitHub官网</a></p>
+<h3 id="2-本地生成ssh-Key"><a href="#2-本地生成ssh-Key" class="headerlink" title="2. 本地生成ssh Key"></a>2. 本地生成ssh Key</h3><p><a href="http://git-scm.com/book/zh/ch4-3.html" target="_blank" rel="external">参考文档</a></p>
+<h3 id="3-与github绑定ssh-Key"><a href="#3-与github绑定ssh-Key" class="headerlink" title="3. 与github绑定ssh Key"></a>3. 与github绑定ssh Key</h3><p>生成sshKey后，查看key</p>
+<blockquote>
+<p>$ cat ~/.ssh/id_rsa.pub</p>
+</blockquote>
+<p>登陆github后，打开<a href="https://github.com/settings/ssh" target="_blank" rel="external">setting-SSH keys 界面</a></p>
+<p>点击<code>Add SSH key</code>，将本地sshkey添加到github</p>
+<h3 id="4-验证是否绑定成功"><a href="#4-验证是否绑定成功" class="headerlink" title="4. 验证是否绑定成功"></a>4. 验证是否绑定成功</h3><blockquote>
+<p>$ ssh -T git@github.com</p>
+</blockquote>
+<p>如果看到的是下面的<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.</div><div class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</div><div class="line">Are you sure you want to continue connecting (yes/no)?</div></pre></td></tr></table></figure></p>
+<p>输入<code>yes</code>，然后就会看到<br><figure class="highlight ada"><table><tr><td class="code"><pre><div class="line">Hi cnfeat! You<span class="symbol">'ve</span> successfully authenticated, but GitHub does <span class="keyword">not</span> provide shell <span class="keyword">access</span>.</div></pre></td></tr></table></figure></p>
+<h3 id="5-设置用户信息"><a href="#5-设置用户信息" class="headerlink" title="5. 设置用户信息"></a>5. 设置用户信息</h3><p>现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。</p>
+<blockquote>
+<p>$ git config –global user.name “username”//用户名</p>
+<p>$ git config –global user.email  “username@mail.com”//填写自己的邮箱</p>
+</blockquote>
+<h2 id="使用GitHub-Pages建立博客"><a href="#使用GitHub-Pages建立博客" class="headerlink" title="使用GitHub Pages建立博客"></a>使用GitHub Pages建立博客</h2><h3 id="创建username-github-io项目"><a href="#创建username-github-io项目" class="headerlink" title="创建username.github.io项目"></a>创建<code>username.github.io</code>项目</h3><ol>
+<li><a href="https://github.com/new" target="_blank" rel="external">新建github项目</a></li>
+<li>项目名必须为<code>username.github.io</code>，其中<code>username</code>为用户名</li>
+</ol>
+<h3 id="修改hexo目录下的配置文件"><a href="#修改hexo目录下的配置文件" class="headerlink" title="修改hexo目录下的配置文件"></a>修改hexo目录下的配置文件</h3><p>打开<code>_config.yml</code>文件<br>修改此段代码<br><figure class="highlight less"><table><tr><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/username.github.io.git</div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
+<ul>
+<li>替换username为你的用户名</li>
+<li>如果hexo是3.0以上版本，将type修改为 git</li>
+</ul>
+<h3 id="上传github"><a href="#上传github" class="headerlink" title="上传github"></a>上传github</h3><blockquote>
+<p>$ hexo g</p>
+<p>$ hexo d</p>
+</blockquote>
+<p>第二条命令如果出现如下提示<br><figure class="highlight ada"><table><tr><td class="code"><pre><div class="line">deployer <span class="keyword">not</span> found: github</div></pre></td></tr></table></figure></p>
+<p>执行下面的命令后，再执行一次（原因:初始化的时候缺少文件）</p>
+<blockquote>
+<p>$ npm install hexo-deployer-git –save</p>
+</blockquote>
+<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p>全部成功后，打开 <a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 可以看到hexo博客已经可以访问</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>待续…</p>
+<h2 id="更换hexo主题"><a href="#更换hexo主题" class="headerlink" title="更换hexo主题"></a>更换hexo主题</h2><p>待续…</p>
+<h2 id="写一篇博客"><a href="#写一篇博客" class="headerlink" title="写一篇博客"></a>写一篇博客</h2><p>待续…</p>
+<h2 id="关于代码备份"><a href="#关于代码备份" class="headerlink" title="关于代码备份"></a>关于代码备份</h2><p>待续…</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/教程/">教程</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/教程/">教程</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://lxy545480918.github.io/2015/12/21/workHexo/" data-title="GitHub+Hexo 搭建独立博客 | Liuxy&#39;s Blog" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/01/11/learn-website/" title="一些学习的网站(持续更新)">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  一些学习的网站(持续更新)</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-number">1.</span> <span class="toc-text">安装Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用Node-js安装Hexo"><span class="toc-number">1.2.</span> <span class="toc-text">使用Node.js安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单的开始"><span class="toc-number">1.3.</span> <span class="toc-text">简单的开始</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Git"><span class="toc-number">2.</span> <span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定SSH"><span class="toc-number">3.</span> <span class="toc-text">绑定SSH</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-申请github账号"><span class="toc-number">3.1.</span> <span class="toc-text">1. 申请github账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-本地生成ssh-Key"><span class="toc-number">3.2.</span> <span class="toc-text">2. 本地生成ssh Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-与github绑定ssh-Key"><span class="toc-number">3.3.</span> <span class="toc-text">3. 与github绑定ssh Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-验证是否绑定成功"><span class="toc-number">3.4.</span> <span class="toc-text">4. 验证是否绑定成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-设置用户信息"><span class="toc-number">3.5.</span> <span class="toc-text">5. 设置用户信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用GitHub-Pages建立博客"><span class="toc-number">4.</span> <span class="toc-text">使用GitHub Pages建立博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建username-github-io项目"><span class="toc-number">4.1.</span> <span class="toc-text">创建username.github.io项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改hexo目录下的配置文件"><span class="toc-number">4.2.</span> <span class="toc-text">修改hexo目录下的配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上传github"><span class="toc-number">4.3.</span> <span class="toc-text">上传github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看结果"><span class="toc-number">4.4.</span> <span class="toc-text">查看结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定域名"><span class="toc-number">5.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换hexo主题"><span class="toc-number">6.</span> <span class="toc-text">更换hexo主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写一篇博客"><span class="toc-number">7.</span> <span class="toc-text">写一篇博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于代码备份"><span class="toc-number">8.</span> <span class="toc-text">关于代码备份</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/收藏/" title="收藏">收藏<sup>3</sup></a></li>
+		
+			<li><a href="/categories/教程/" title="教程">教程<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/收藏/" title="收藏">收藏<sup>3</sup></a></li>
+		
+			<li><a href="/tags/教程/" title="教程">教程<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/2146821437" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/lxy545480918" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2017 
+		
+		<a href="http://lxy545480918.github.io" target="_blank" title="Liuxy">Liuxy</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:""};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>
